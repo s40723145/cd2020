@@ -154,18 +154,23 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">Develop << <a href='Develop.html'>Previous</a> <br /><h1>Update Python</h1>
+<p>先至<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>下載所需要的版本</p>
+<p>開啟Python3.8.2安裝檔後要選擇Customize installation(才能自行選擇檔案要放的位置)</p>
+<p><img alt="" height="412" src="./../images/install_Python.PNG" width="674"/></p>
+<p>在data的目錄下建立"py382"的資料夾並將所下載的Python檔案放至py382中</p>
+<p>利用SciTE開啟start_mdecourse.bat檔案，並將原先所設置的Python資料夾路徑設置改為剛剛安裝的py382</p>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
+set PYTHONHOME=%Disk%:\py382
+
+set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
+set path_msys2=%Disk%:\msys64\mingw64\bin;</pre>
+<p>完成路徑修改後重新啟動start_mdecourse.bat檔</p>
+<p>在命令列中輸入"python"即可看到當前版本</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/S2KdNjMhGIg" width="560"></iframe></p><br />Develop << <a href='Develop.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
