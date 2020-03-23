@@ -41,6 +41,17 @@ set path_msys2=%Disk%:\msys64\mingw64\bin;</pre>
 <p>此時即可跳出安裝指令</p>
 <h1>Assignment 1</h1>
 <h2>Random grouping</h2>
+<p><span style="background-color: #ffff00;">亂數分組程式流程:</span></p>
+<p><span style="color: #ff6600;">1.抓出學員資料</span></p>
+<p>利用Python的requests模組來擷取網頁上的內容</p>
+<p><span style="color: #ff6600;">2.將抓出的資料轉為文字檔</span></p>
+<p>設定一變數將剛剛擷取出來的內容轉為文字檔方便之後做處理</p>
+<p><span style="color: #ff6600;">3.將文字檔內容轉為數列</span></p>
+<p>利用split語法將剛剛的文字內容以空格作為分割依據來建立一數列</p>
+<p><span style="color: #ff6600;">4.使用random模組將學員資料打亂</span></p>
+<p>將上述的數列內容由原本依照學號排序之順序改為亂數排序</p>
+<p><span style="color: #ff6600;">5.利用迴圈及判斷式列印文字</span></p>
+<p>利用第一層迴圈來顯示1~4組，接著利用判斷式來分辨目前分到第幾組了並再次利用迴圈來做組員分配</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
 import random
 url = "https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt"
