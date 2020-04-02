@@ -162,6 +162,67 @@ img.add_border {
 <p><a href="https://www.scintilla.org/SciTEDownload.html">SciTE</a>:能利用此文字編輯器來進行不同程式語言的撰寫(e.g. Python、html)</p>
 <p><a href="https://www.msys2.org/">MSYS2</a>:能在windows環境下建立類linux環境</p>
 <p><a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>:使用Python時會需要相關套件，用pip來做管理較為方便</p>
+<p>建立可攜系統步驟:</p>
+<p>將下載後的Portable Git檔案放置在CD2020\data\portablegit資料夾中</p>
+<p>將<span>下載後的Python檔案放置在CD2020\data\py382資料夾中</span></p>
+<p><span>將下載後的SciTE檔案放置在CD2020\data\wscite432資料夾中</span></p>
+<p><span>將下載後的MSYS2檔案放置在CD2020\data\msys64資料夾中</span></p>
+<p><span>將下載後的get-pip.py檔案放置在CD2020\data資料夾中並執行</span></p>
+<p><span>在CD2020資料夾中建立一start.bat檔案，內容為:</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+subst %Disk%: "data"
+
+%Disk%:
+
+set HomePath=%Disk%:\home_mdecourse
+set HomeDrive=%Disk%:\home_mdecourse
+set Home=%Disk%:\home_mdecourse
+set USERPROFILE=%Disk%:\home_mdecourse
+
+REM 將系統 Python 程式的 io 設為 utf-8
+set PYTHONIOENCODING="utf-8"
+
+REM for putty
+Set GIT_HOME=%CDisk%:\portablegit\bin\
+Set GIT_SSH=%Disk%:\putty\plink.exe
+
+set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
+set PYTHONHOME=%Disk%:\py382
+
+set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
+set path_msys2=%Disk%:\msys64\mingw64\bin;
+set path_git=%Disk%:\portablegit\bin;
+set path_tcc=%Disk%:\tcc;
+
+path=%Disk%:;%path_python%;%path_msys2%;%path_git%;%path_tcc%;
+
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+start /MIN cmd.exe
+
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+start /MIN %Disk%:\wscite432\wscite\SciTE.exe
+
+Exit</pre>
+<p>主要為設置路徑至上述檔案放置的資料夾、建立一分割磁碟Y、開啟命令列和開啟SciTE</p>
+<p>再建立一stop.bat檔案供關閉用start.bat檔案開啟的相關內容</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">@echo off
+set Disk=y
+path=%PATH%;
+
+taskkill /IM python.exe /F
+taskkill /IM pythonw.exe /F
+taskkill /IM scite.exe /F
+taskkill /IM ShareX.exe /F
+
+REM 終止虛擬硬碟與目錄的對應
+subst %Disk%: /D
+REM 關閉 cmd 指令視窗
+taskkill /IM cmd.exe /F
+
+EXIT</pre>
 <p></p><br />random grouping << <a href='random grouping.html'>Previous</a> </div>
         
     <!-- footer -->
