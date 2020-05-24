@@ -205,7 +205,22 @@ EXIT</pre>
 <p>將憑證的內容存為文字檔存在pj1資料夾的上一層</p>
 <p>再將config.py裡的oauth_scrum改為oauth_gm</p>
 <p>接著在終端機啟動8443頁面</p>
-<p>進入8443頁面後要利用gm的帳號來登入即可看到相關頁面</p><h1>course notes</h1>
+<p>進入8443頁面後要利用gm的帳號來登入即可看到相關頁面</p>
+<h1>Final Project</h1>
+<p>ref:</p>
+<p><a href="http://mde.tw/cd2020pj1/content/RemoteAPI.html">http://mde.tw/cd2020pj1/content/RemoteAPI.html</a></p>
+<p><a href="http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html">http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html</a></p>
+<h2>Remote API</h2>
+<p>ref</p>
+<p>ServerSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm</a></p>
+<p>ClientSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm</a></p>
+<p>要使用Python remoteAPI之前需要先有以下3個檔案</p>
+<ul>
+<li><span>sim.py</span></li>
+<li><span>simConst.py</span></li>
+<li><span>remoteApi.dll, remoteApi.dylib or remoteApi.so (depending on your target platform)</span></li>
+</ul>
+<p><span>以上檔案可在<em>programming/remoteApiBindings/python、programming\remoteApiBindings\lib\lib\Windows</em>找到</span></p><h1>course notes</h1>
 <h2>w7</h2>
 <p>檢視個人網站及分組網站的h1命名、相關URL連結、網頁標題:</p>
 <ul>
@@ -290,7 +305,7 @@ pip install imutils</pre>
 <h2>w12</h2>
 <p>Ubuntu 20.04 Virtualbox設定</p>
 <ul>
-<li>Preference Network設定，IP為Virtualbox裡的IP，Port設定(Putty:22、CoppeliaSim:1999)</li>
+<li>Preference Network設定，IP為Virtualbox裡的IP，Port設定(Putty:22、CoppeliaSim:19999)</li>
 <li>進入<span>/etc/netplan 編輯00-installer-config.yaml修改裡面的網路設定</span></li>
 <li>若在學校因為有proxy所以須至 <span>/etc/apt 新增proxy.conf，加入Acquire::http::proxy"http://[2001:288:6004:17::17]:3128";</span><span></span><span></span></li>
 </ul>

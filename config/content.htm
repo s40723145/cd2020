@@ -205,7 +205,27 @@ EXIT</pre>
 <p>將憑證的內容存為文字檔存在pj1資料夾的上一層</p>
 <p>再將config.py裡的oauth_scrum改為oauth_gm</p>
 <p>接著在終端機啟動8443頁面</p>
-<p>進入8443頁面後要利用gm的帳號來登入即可看到相關頁面</p><h1>course notes</h1>
+<p>進入8443頁面後要利用gm的帳號來登入即可看到相關頁面</p>
+<h1>Final Project</h1>
+<p>ref:</p>
+<p><a href="http://mde.tw/cd2020pj1/content/RemoteAPI.html">http://mde.tw/cd2020pj1/content/RemoteAPI.html</a></p>
+<p><a href="http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html">http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html</a></p>
+<h2>Remote API</h2>
+<p>ref</p>
+<p>ServerSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm</a></p>
+<p>ClientSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm</a></p>
+<hr/>
+<p>要使用Python remoteAPI之前需要先有以下3個檔案</p>
+<ul>
+<li><span>sim.py</span></li>
+<li><span>simConst.py</span></li>
+<li><span>remoteApi.dll, remoteApi.dylib or remoteApi.so (depending on your target platform)</span></li>
+</ul>
+<p><span>以上檔案可在<em>programming/remoteApiBindings/python、programming\remoteApiBindings\lib\lib\Windows</em>找到</span></p>
+<hr/>
+<p>在Server端的部分須至主程式內加入</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
+<p>才可在Client端接收到port 19999</p><h1>course notes</h1>
 <h2>w7</h2>
 <p>檢視個人網站及分組網站的h1命名、相關URL連結、網頁標題:</p>
 <ul>

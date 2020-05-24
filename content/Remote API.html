@@ -154,61 +154,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">question << <a href='question.html'>Previous</a> <a href='portable system.html'>Next</a> >> portable system<br /><h1>random grouping</h1>
-<p><span style="background-color: #ffff00;">亂數分組程式流程:</span></p>
-<p><span style="color: #ff6600;">1.抓出學員資料</span></p>
-<p>利用Python的requests模組來擷取網頁上的內容</p>
-<p><span style="color: #ff6600;">2.將抓出的資料轉為文字檔</span></p>
-<p>設定一變數將剛剛擷取出來的內容轉為文字檔方便之後做處理</p>
-<p><span style="color: #ff6600;">3.將文字檔內容轉為數列</span></p>
-<p>利用split語法將剛剛的文字內容以空格作為分割依據來建立一數列</p>
-<p><span style="color: #ff6600;">4.使用random模組將學員資料打亂</span></p>
-<p>將上述的數列內容由原本依照學號排序之順序改為亂數排序</p>
-<p><span style="color: #ff6600;">5.利用迴圈及判斷式列印文字</span></p>
-<p>利用第一層迴圈來顯示1~4組，接著利用判斷式來分辨目前分到第幾組了並再次利用迴圈來做組員分配</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import requests
-import random
-url = "https://mde.tw/cd2020/downloads/2020spring_cd_2a_list.txt"
-Msource = requests.get(url)
-#print(Msource.text)
-member = Msource.text
-mlist = member.split("\n")
-mlist.pop()
-#print(member)
-mlen = len(mlist)
-#print(mlist[0:13])
-random.shuffle(mlist)
-
-g1 = 13
-g2 = 2*g1
-g3 = 3*g1
-g4 = int(mlen)
-
-print("全班共",mlen,"人")
-for i in range(1,5):
-    print("Group",i,":")
-    if (i == 1):
-        for j in range(0,g1):
-            print(mlist[j])
-            j += 1
-        print("-"*20)
-    elif (i == 2):
-        for m in range(g1,g2):
-            print(mlist[g1])
-            g1 += 1
-        print("-"*20)
-    elif (i==3):
-        for k in range(g2,g3):
-            print(mlist[g2])
-            g2 += 1
-        print("-"*20)
-    elif (i == 4):
-        for l in range(g3,g4):
-            print(mlist[g3])
-            g3 += 1
-        print("-"*20)
-print(mlist)</pre>
-<br />question << <a href='question.html'>Previous</a> <a href='portable system.html'>Next</a> >> portable system</div>
+    <div id="tipue_search_content">Final Project << <a href='Final Project.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes<br /><h1>Remote API</h1>
+<p>ref</p>
+<p>ServerSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiServerSide.htm</a></p>
+<p>ClientSide:<a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm">https://www.coppeliarobotics.com/helpFiles/en/remoteApiClientSide.htm</a></p>
+<hr/>
+<p>要使用Python remoteAPI之前需要先有以下3個檔案</p>
+<ul>
+<li><span>sim.py</span></li>
+<li><span>simConst.py</span></li>
+<li><span>remoteApi.dll, remoteApi.dylib or remoteApi.so (depending on your target platform)</span></li>
+</ul>
+<p><span>以上檔案可在<em>programming/remoteApiBindings/python、programming\remoteApiBindings\lib\lib\Windows</em>找到</span></p>
+<hr/>
+<p>在Server端的部分須至主程式內加入</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
+<p>才可在Client端接收到port 19999</p><br />Final Project << <a href='Final Project.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes</div>
         
     <!-- footer -->
       <div class="container">
