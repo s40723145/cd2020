@@ -154,38 +154,12 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='虛擬主機之近端.html'>Next</a> >> 虛擬主機之近端<br /><h1>IPv6 Setting</h1>
-<p>開啟Terminal利用</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
-<p>查詢IP</p>
-<p>無法使用需先安裝工具</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt install net-tools</pre>
-<p>若發現是網路問題(IPv6)無法連線</p>
-<p>先切換目錄/etc/netplan 編輯<span>00-installer-config.yaml檔案內的設定</span></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi 00-installer-config.yaml</pre>
-<p>00-installer-config.yaml</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">network:
-    ethernets:
-        enpes3:
-            dhcp4: true
-            dhcp6: true
-            nameservers:
-                addresses:
-                    - 2001:b000:168::1
-    version: 2</pre>
-<p>在修改完檔案後須</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo netplan apply</pre>
-<p>更新網路設定</p>
-<hr/>
-<p>Proxy設定</p>
-<p>切換目錄到<span>/etc/apt/apt.conf.d 編輯proxy.conf檔案</span></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi proxy.conf</pre>
-<p>原本在proxy.conf裡面是空的，需在檔案內加入</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::proxy "http://[2001:288:6004:17::(port)]:3128";</pre>
-<p>上述接設定完成後可用</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
-<p>嘗試更新，若網路設定成功即可順利更新</p>
-<br />Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='虛擬主機之近端.html'>Next</a> >> 虛擬主機之近端</div>
+    <div id="tipue_search_content">虛擬主機之近端 << <a href='虛擬主機之近端.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes<br /><h1>Q&A</h1>
+<p><span style="background-color: #ff9900;">Q:</span></p>
+<p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
+<p><span style="background-color: #ffff00;">A:</span></p>
+<p>1.組態有問題，刪除原本的NATnetwork設定檔重新建立一個</p>
+<p>2.VirtualBox讀取到暫存檔，重開機即可</p><br />虛擬主機之近端 << <a href='虛擬主機之近端.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes</div>
         
     <!-- footer -->
       <div class="container">
