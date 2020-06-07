@@ -154,24 +154,37 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Assignment 1 << <a href='Assignment 1.html'>Previous</a> <a href='question.html'>Next</a> >> question<br /><h1>Update Python</h1>
-<p>先至<a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a>下載所需要的版本</p>
-<p>開啟Python3.8.2安裝檔後要選擇Customize installation(才能自行選擇檔案要放的位置)</p>
-<p><img alt="" height="412" src="./../images/install_Python.PNG" width="674"/></p>
-<p>在data的目錄下建立"py382"的資料夾並將所下載的Python檔案放至py382中</p>
-<p>利用SciTE開啟start_mdecourse.bat檔案，並將原先所設置的Python資料夾路徑設置改為剛剛安裝的py382</p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">REM 將系統 Python 程式的 io 設為 utf-8
-set PYTHONIOENCODING="utf-8"
-
-set PYTHONPATH=%Disk%:\py382\DLLs;%Disk%:\py382\Lib;%Disk%:\py382\Lib\site-packages;
-set PYTHONHOME=%Disk%:\py382
-
-set path_python=%Disk%:\py382;%Disk%:\py382\Scripts;
-set path_msys2=%Disk%:\msys64\mingw64\bin;</pre>
-<p>完成路徑修改後重新啟動start_mdecourse.bat檔</p>
-<p>在命令列中輸入"python"即可看到當前版本</p>
-<p><br/><br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/S2KdNjMhGIg" width="560"></iframe></p>
-<br />Assignment 1 << <a href='Assignment 1.html'>Previous</a> <a href='question.html'>Next</a> >> question</div>
+    <div id="tipue_search_content">Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes<br /><h1>IPv6 Setting</h1>
+<p>開啟Terminal利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
+<p>查詢IP</p>
+<p>無法使用需先安裝工具</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt install net-tools</pre>
+<p>若發現是網路問題(IPv6)無法連線</p>
+<p>先切換目錄/etc/netplan 編輯<span>00-installer-config.yaml檔案內的設定</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi 00-installer-config.yaml</pre>
+<p>00-installer-config.yaml</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">network:
+    ethernets:
+        enpes3:
+            dhcp4: true
+            dhcp6: true
+            nameservers:
+                addresses:
+                    - 2001:b000:168::1
+    version: 2</pre>
+<p>在修改完檔案後須</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo netplan apply</pre>
+<p>更新網路設定</p>
+<hr/>
+<p>Proxy設定</p>
+<p>切換目錄到<span>/etc/apt/apt.conf.d 編輯proxy.conf檔案</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi proxy.conf</pre>
+<p>原本在proxy.conf裡面是空的，需在檔案內加入</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::proxy "http://[2001:288:6004:17::(port)]:3128";</pre>
+<p>上述接設定完成後可用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
+<p>嘗試更新，若網路設定成功即可順利更新</p><br />Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes</div>
         
     <!-- footer -->
       <div class="container">
