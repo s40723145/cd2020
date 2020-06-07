@@ -258,7 +258,18 @@ EXIT</pre>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::proxy "http://[2001:288:6004:17::(port)]:3128";</pre>
 <p>上述接設定完成後可用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
-<p>嘗試更新，若網路設定成功即可順利更新</p><h1>course notes</h1>
+<p>嘗試更新，若網路設定成功即可順利更新</p>
+<h2>虛擬主機之近端</h2>
+<p>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding</p>
+<p>修改IP設定</p>
+<p><img alt="" height="459" src="/images/networkIpSetting.PNG" width="662"/></p>
+<p>其中Guest ip需在終端機利用ifconfig搜尋</p>
+<p><img alt="" height="477" src="/images/ubuntu ifconfig.PNG" width="726"/></p>
+<p>接著進入<span>cd2020pj1的資料夾修改wsgi.py檔案，將host內容改為自己設定的host IP (10.0.2.4)</span></p>
+<p><span>接著利用</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
+<p>啟動近端</p>
+<p>再到自己的電腦連接到https://127.0.0.1:18443</p><h1>course notes</h1>
 <h2>w7</h2>
 <p>檢視個人網站及分組網站的h1命名、相關URL連結、網頁標題:</p>
 <ul>
