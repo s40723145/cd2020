@@ -108,6 +108,7 @@ img.add_border {
 </head>
 <body>
 <div class='container'><nav>
+        
     <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -153,4 +154,58 @@ img.add_border {
           </div>
           
         </header>
-    </nav><section><h1>Site Map</h1><div id="tipue_search_content"></div><ul><li><a href='About.html'>About</a><li><a href='Stream.html'>Stream</a><ul><li><a href='question-1.html'>question-1</a></li></ul><li><a href='Assignment 1.html'>Assignment 1</a><ul><li><a href='Update Python.html'>Update Python</a><ul><li><a href='question.html'>question</a></li></ul><li><a href='random grouping.html'>random grouping</a><li><a href='portable system.html'>portable system</a></li></ul><li><a href='Assignment 2.html'>Assignment 2</a><ul><li><a href='Topic 1.html'>Topic 1</a><li><a href='Oauth2.html'>Oauth2</a></li></ul><li><a href='Final Project.html'>Final Project</a><ul><li><a href='Remote API.html'>Remote API</a></li></ul><li><a href='Ubuntu.html'>Ubuntu</a><ul><li><a href='IPv6 環境網路設定.html'>IPv6 環境網路設定</a><li><a href='虛擬主機之近端.html'>虛擬主機之近端</a><ul><li><a href='IPv4.html'>IPv4</a><li><a href='IPv6.html'>IPv6</a></li></ul><li><a href='Q&A.html'>Q&A</a></li></ul><li><a href='course notes.html'>course notes</a><ul><li><a href='w7.html'>w7</a><li><a href='w8.html'>w8</a><li><a href='w9.html'>w9</a><li><a href='w10.html'>w10</a><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a></li></ul></section></div></body></html>
+    <div id="tipue_search_content">IPv4 << <a href='IPv4.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A<br /><h1>IPv6</h1>
+<p><span>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding 修改IPv6設定</span></p>
+<p><span><img alt="" height="466" src="./../images/IPv6 network settings.PNG" width="667"/></span></p>
+<p>接著修改wsgi.py的host，改為ifconfig查到的IPv6 IP</p>
+<p><img alt="" height="487" src="./../images/virtualbox wsgi.PNG" width="741"/></p>
+<p></p>
+<p>修改完成後利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
+<p>啟動虛擬主機的近端，如果都設定完成會出現以下畫面</p>
+<p></p>
+<p><img alt="" height="509" src="./../images/vitrualbox pj1 18443.PNG" width="947"/></p>
+<p>接著到自己電腦的系統利用https://[::1]:18443嘗試連線至利用虛擬主機開啟的網站</p>
+<p><img alt="" height="565" src="./../images/18443成功畫面.PNG" width="950"/></p><br />IPv4 << <a href='IPv4.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        </body></html>
+        

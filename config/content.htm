@@ -269,7 +269,20 @@ EXIT</pre>
 <p><span>接著利用</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
 <p>啟動近端</p>
-<p>再到自己的電腦連接到https://127.0.0.1:18443</p><h2>Q&amp;A</h2>
+<p>再到自己的電腦連接到https://127.0.0.1:18443</p>
+<h3>IPv6</h3>
+<p><span>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding 修改IPv6設定</span></p>
+<p><span><img alt="" height="466" src="/images/IPv6 network settings.PNG" width="667"/></span></p>
+<p>接著修改wsgi.py的host，改為ifconfig查到的IPv6 IP</p>
+<p><img alt="" height="487" src="/images/virtualbox wsgi.PNG" width="741"/></p>
+<p></p>
+<p>修改完成後利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
+<p>啟動虛擬主機的近端，如果都設定完成會出現以下畫面</p>
+<p></p>
+<p><img alt="" height="509" src="/images/vitrualbox pj1 18443.PNG" width="947"/></p>
+<p>接著到自己電腦的系統利用https://[::1]:18443嘗試連線至利用虛擬主機開啟的網站</p>
+<p><img alt="" height="565" src="/images/18443成功畫面.PNG" width="950"/></p><h2>Q&amp;A</h2>
 <p><span style="background-color: #ff9900;">Q:</span></p>
 <p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
 <p><span style="background-color: #ffff00;">A:</span></p>
