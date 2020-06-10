@@ -228,7 +228,7 @@ EXIT</pre>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
 <p>才可在Client端接收到port 19999</p>
 <h1>Ubuntu</h1>
-<h2>IPv6 Setting</h2>
+<h2>IPv6 環境網路設定</h2>
 <p>開啟Terminal利用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
 <p>查詢IP</p>
@@ -258,8 +258,8 @@ EXIT</pre>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::proxy "http://[2001:288:6004:17::(port)]:3128";</pre>
 <p>上述接設定完成後可用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
-<p>嘗試更新，若網路設定成功即可順利更新</p>
-<h2>虛擬主機之近端</h2>
+<p>嘗試更新，若網路設定成功即可順利更新</p><h2>虛擬主機之近端</h2>
+<h3>IPv4</h3>
 <p>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding</p>
 <p>修改IP設定</p>
 <p><img alt="" height="459" src="/images/networkIpSetting.PNG" width="662"/></p>
@@ -269,8 +269,7 @@ EXIT</pre>
 <p><span>接著利用</span></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
 <p>啟動近端</p>
-<p>再到自己的電腦連接到https://127.0.0.1:18443</p>
-<h2>Q&amp;A</h2>
+<p>再到自己的電腦連接到https://127.0.0.1:18443</p><h2>Q&amp;A</h2>
 <p><span style="background-color: #ff9900;">Q:</span></p>
 <p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
 <p><span style="background-color: #ffff00;">A:</span></p>
