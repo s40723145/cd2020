@@ -227,7 +227,19 @@ EXIT</pre>
 <p>在Server端的部分須至主程式內加入</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
 <p>才可在Client端接收到port 19999</p>
-<h1>Ubuntu</h1>
+<h2>Control</h2>
+<p>利用Python API控制車子移動所需要的程式碼分成:</p>
+<p>抓取在CoppeliaSim所需要的joint設定</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def __init__(self, clientID, printFlag=False):
+		self.clientID = clientID
+		errorCode, self.steer_handle = sim.simxGetObjectHandle(self.clientID, 'steer_joint', sim.simx_opmode_oneshot_wait);
+		errorCode, self.motor_handle = sim.simxGetObjectHandle(self.clientID, 'motor_joint', sim.simx_opmode_oneshot_wait);
+		errorCode, self.fl_brake_handle = sim.simxGetObjectHandle(self.clientID, 'fl_brake_joint', sim.simx_opmode_oneshot_wait);
+		errorCode, self.fr_brake_handle = sim.simxGetObjectHandle(self.clientID, 'fr_brake_joint', sim.simx_opmode_oneshot_wait);
+		errorCode, self.bl_brake_handle = sim.simxGetObjectHandle(self.clientID, 'bl_brake_joint', sim.simx_opmode_oneshot_wait);
+		errorCode, self.br_brake_handle = sim.simxGetObjectHandle(self.clientID, 'br_brake_joint', sim.simx_opmode_oneshot_wait);
+</pre>
+<p></p><h1>Ubuntu</h1>
 <h2>IPv6 Setting</h2>
 <p>開啟Terminal利用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
@@ -271,9 +283,9 @@ EXIT</pre>
 <p>啟動近端</p>
 <p>再到自己的電腦連接到https://127.0.0.1:18443</p>
 <h2>Q&amp;A</h2>
-<p>Q:</p>
+<p><span style="background-color: #ff9900;">Q:</span></p>
 <p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
-<p>A:</p>
+<p><span style="background-color: #ffff00;">A:</span></p>
 <p>1.組態有問題，刪除原本的NATnetwork設定檔重新建立一個</p>
 <p>2.VirtualBox讀取到暫存檔，重開機即可</p><h1>course notes</h1>
 <h2>w7</h2>
