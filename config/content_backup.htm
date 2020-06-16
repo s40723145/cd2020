@@ -239,7 +239,41 @@ EXIT</pre>
 		errorCode, self.bl_brake_handle = sim.simxGetObjectHandle(self.clientID, 'bl_brake_joint', sim.simx_opmode_oneshot_wait);
 		errorCode, self.br_brake_handle = sim.simxGetObjectHandle(self.clientID, 'br_brake_joint', sim.simx_opmode_oneshot_wait);
 </pre>
-<p></p><h1>Ubuntu</h1>
+<p></p>
+<p>建立一函式控制車子的移動速度</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def set_throttle(self, target_speed):
+		if(target_speed &gt; self.max_throttle):
+			target_speed = self.max_throttle;
+		elif(target_speed &lt; self.max_reverse_throttle):
+			target_speed = self.max_reverse_throttle;
+		if(self.printFlag):
+			print('Setting throttle to', target_speed);
+		speed = target_speed * self.factor;
+		errorCode = sim.simxSetJointTargetVelocity(self.clientID, self.motor_handle, speed,sim.simx_opmode_streaming);
+		</pre>
+<p>控制車子轉向</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def set_steering(self, steer_pos):
+		if(abs(steer_pos) &gt; self.max_steer):
+			if(steer_pos &gt; 0):
+				steer_pos = self.max_steer;
+			else:
+				steer_pos = -self.max_steer;
+		if(self.printFlag):
+			print('Setting steering to', steer_pos);
+		# Convert to radians
+		steer_pos = np.deg2rad(steer_pos);        
+		errorCode = sim.simxSetJointTargetPosition(self.clientID, self.steer_handle, steer_pos, sim.simx_opmode_streaming);</pre>
+<p>確認是否能連結至server端</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sim.simxFinish(-1) # just in case, close all opened connections
+clientID = sim.simxStart('127.0.0.1',19999,True,True,5000,5) # Get the client ID
+
+if clientID!=-1:  #check if client connection successful
+    print('Connected to remote API server')
+    
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')</pre>
+<p><br/><br/></p><h1>Ubuntu</h1>
 <h2>IPv6 Setting</h2>
 <p>開啟Terminal利用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
