@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='Stream.html'>Stream</a><ul class='dropdown'><li><a href='question-1.html'>question-1</a></li></ul><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li class='has-children'><a href='Update Python.html'>Update Python</a><ul class='dropdown'><li><a href='question.html'>question</a></li></ul><li><a href='random grouping.html'>random grouping</a><li><a href='portable system.html'>portable system</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='Oauth2.html'>Oauth2</a></li></ul><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='Remote API.html'>Remote API</a><li><a href='Control.html'>Control</a></li></ul><li class='has-children'><a href='Ubuntu.html'>Ubuntu</a><ul class='dropdown'><li><a href='IPv6 Setting.html'>IPv6 Setting</a><li><a href='虛擬主機之近端.html'>虛擬主機之近端</a><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='course notes.html'>course notes</a><ul class='dropdown'><li><a href='w7.html'>w7</a><li><a href='w8.html'>w8</a><li><a href='w9.html'>w9</a><li><a href='w10.html'>w10</a><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Stream.html'>Stream</a><ul class='dropdown'><li><a href='question-1.html'>question-1</a></li></ul><li class='has-children'><a href='Assignment 1.html'>Assignment 1</a><ul class='dropdown'><li class='has-children'><a href='Update Python.html'>Update Python</a><ul class='dropdown'><li><a href='question.html'>question</a></li></ul><li><a href='random grouping.html'>random grouping</a><li><a href='portable system.html'>portable system</a></li></ul><li class='has-children'><a href='Assignment 2.html'>Assignment 2</a><ul class='dropdown'><li><a href='Topic 1.html'>Topic 1</a><li><a href='Oauth2.html'>Oauth2</a></li></ul><li class='has-children'><a href='Final Project.html'>Final Project</a><ul class='dropdown'><li><a href='Remote API.html'>Remote API</a></li></ul><li class='has-children'><a href='Ubuntu.html'>Ubuntu</a><ul class='dropdown'><li><a href='IPv6 環境網路設定.html'>IPv6 環境網路設定</a><li class='has-children'><a href='虛擬主機之近端.html'>虛擬主機之近端</a><ul class='dropdown'><li><a href='IPv4.html'>IPv4</a><li><a href='IPv6.html'>IPv6</a></li></ul><li><a href='Q&A.html'>Q&A</a></li></ul><li class='has-children'><a href='course notes.html'>course notes</a><ul class='dropdown'><li><a href='w7.html'>w7</a><li><a href='w8.html'>w8</a><li><a href='w9.html'>w9</a><li><a href='w10.html'>w10</a><li><a href='w11.html'>w11</a><li><a href='w12.html'>w12</a></li>
                       </ul>
                 </nav>
               </div>
@@ -154,38 +154,19 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='虛擬主機之近端.html'>Next</a> >> 虛擬主機之近端<br /><h1>IPv6 Setting</h1>
-<p>開啟Terminal利用</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
-<p>查詢IP</p>
-<p>無法使用需先安裝工具</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt install net-tools</pre>
-<p>若發現是網路問題(IPv6)無法連線</p>
-<p>先切換目錄/etc/netplan 編輯<span>00-installer-config.yaml檔案內的設定</span></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi 00-installer-config.yaml</pre>
-<p>00-installer-config.yaml</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">network:
-    ethernets:
-        enpes3:
-            dhcp4: true
-            dhcp6: true
-            nameservers:
-                addresses:
-                    - 2001:b000:168::1
-    version: 2</pre>
-<p>在修改完檔案後須</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo netplan apply</pre>
-<p>更新網路設定</p>
-<hr/>
-<p>Proxy設定</p>
-<p>切換目錄到<span>/etc/apt/apt.conf.d 編輯proxy.conf檔案</span></p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo vi proxy.conf</pre>
-<p>原本在proxy.conf裡面是空的，需在檔案內加入</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Acquire::http::proxy "http://[2001:288:6004:17::(port)]:3128";</pre>
-<p>上述接設定完成後可用</p>
-<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">sudo apt update</pre>
-<p>嘗試更新，若網路設定成功即可順利更新</p>
-<br />Ubuntu << <a href='Ubuntu.html'>Previous</a> <a href='虛擬主機之近端.html'>Next</a> >> 虛擬主機之近端</div>
+    <div id="tipue_search_content">IPv4 << <a href='IPv4.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A<br /><h1>IPv6</h1>
+<p><span>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding 修改IPv6設定</span></p>
+<p><span><img alt="" height="466" src="./../images/IPv6 network settings.PNG" width="667"/></span></p>
+<p>接著修改wsgi.py的host，改為ifconfig查到的IPv6 IP</p>
+<p><img alt="" height="487" src="./../images/virtualbox wsgi.PNG" width="741"/></p>
+<p></p>
+<p>修改完成後利用</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
+<p>啟動虛擬主機的近端，如果都設定完成會出現以下畫面</p>
+<p></p>
+<p><img alt="" height="509" src="./../images/vitrualbox pj1 18443.PNG" width="947"/></p>
+<p>接著到自己電腦的系統利用https://[::1]:18443嘗試連線至利用虛擬主機開啟的網站</p>
+<p><img alt="" height="565" src="./../images/18443成功畫面.PNG" width="950"/></p><br />IPv4 << <a href='IPv4.html'>Previous</a> <a href='Q&A.html'>Next</a> >> Q&A</div>
         
     <!-- footer -->
       <div class="container">
