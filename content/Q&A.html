@@ -159,7 +159,13 @@ img.add_border {
 <p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
 <p><span style="background-color: #ffff00;">A:</span></p>
 <p>1.組態有問題，刪除原本的NATnetwork設定檔重新建立一個</p>
-<p>2.VirtualBox讀取到暫存檔，重開機即可</p><br />IPv6 << <a href='IPv6.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes</div>
+<p>2.VirtualBox讀取到暫存檔，重開機即可</p>
+<hr/>
+<p><span style="background-color: #ff9900;">Q:</span></p>
+<p>利用ifconfig時無法找到IPv6<span style="background-color: #ff9900;"></span></p>
+<p><img alt="" height="477" src="./../images/ubuntu ifconfig.PNG" width="726"/></p>
+<p><span style="background-color: #ffff00;">A:</span></p>
+<p>先關閉虛擬主機，接著先將網路連線方式切換至其他方式(例如橋接)儲存後再改回NATnetwork讓系統重新讀取NATnetwork的設定</p><br />IPv6 << <a href='IPv6.html'>Previous</a> <a href='course notes.html'>Next</a> >> course notes</div>
         
     <!-- footer -->
       <div class="container">
