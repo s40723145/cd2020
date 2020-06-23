@@ -227,10 +227,9 @@ EXIT</pre>
 <p>在Server端的部分須至主程式內加入</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
 <p>才可在Client端接收到port 19999</p>
-<<<<<<< HEAD
 <h2>Control</h2>
 <p>利用Python API控制車子移動所需要的程式碼分成:</p>
-<p>抓取在CoppeliaSim所需要的joint設定</p>
+<p>抓取在CoppeliaSim所需要的物件設定</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def __init__(self, clientID, printFlag=False):
 		self.clientID = clientID
 		errorCode, self.steer_handle = sim.simxGetObjectHandle(self.clientID, 'steer_joint', sim.simx_opmode_oneshot_wait);
@@ -274,12 +273,9 @@ if clientID!=-1:  #check if client connection successful
 else:
     print('Connection not successful')
     sys.exit('Could not connect')</pre>
-<p><br/><br/></p><h1>Ubuntu</h1>
-<h2>IPv6 Setting</h2>
-=======
+<p><br/><br/></p>
 <h1>Ubuntu</h1>
 <h2>IPv6 環境網路設定</h2>
->>>>>>> 4e570ca8756de0581f774f9830584d5d01608004
 <p>開啟Terminal利用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
 <p>查詢IP</p>
@@ -321,20 +317,19 @@ else:
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
 <p>啟動近端</p>
 <p>再到自己的電腦連接到https://127.0.0.1:18443</p>
-<<<<<<< HEAD
-<h2>Q&amp;A</h2>
-=======
 <h3>IPv6</h3>
 <p><span>進入file--&gt;preferences--&gt;Network--&gt;Port Forwarding 修改IPv6設定</span></p>
 <p><span><img alt="" height="466" src="/images/IPv6 network settings.PNG" width="667"/></span></p>
 <p>接著修改wsgi.py的host，改為ifconfig查到的IPv6 IP</p>
 <p><img alt="" height="487" src="/images/virtualbox wsgi.PNG" width="741"/></p>
+<p></p>
 <p>修改完成後利用</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">python3 wsgi.py</pre>
 <p>啟動虛擬主機的近端，如果都設定完成會出現以下畫面</p>
+<p></p>
 <p><img alt="" height="509" src="/images/vitrualbox pj1 18443.PNG" width="947"/></p>
-<p></p><h2>Q&amp;A</h2>
->>>>>>> 4e570ca8756de0581f774f9830584d5d01608004
+<p>接著到自己電腦的系統利用https://[::1]:18443嘗試連線至利用虛擬主機開啟的網站</p>
+<p><img alt="" height="565" src="/images/18443成功畫面.PNG" width="950"/></p><h2>Q&amp;A</h2>
 <p><span style="background-color: #ff9900;">Q:</span></p>
 <p>在儲存NAT Networks設定時產生錯誤(儲存失敗)</p>
 <p><span style="background-color: #ffff00;">A:</span></p>
@@ -432,3 +427,4 @@ pip install imutils</pre>
 <ul>
 <li><span>抽籤分組由12人協同一倉儲並解決衝突</span></li>
 </ul>
+<h2><span>w13~16</span></h2>
