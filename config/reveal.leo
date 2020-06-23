@@ -30,6 +30,15 @@
 <v t="leo.20200623222909.1"><vh>final profect</vh>
 <v t="leo.20200623222909.2"><vh>final profect</vh></v>
 </v>
+<v t="leo.20200623234055.1"><vh>control</vh>
+<v t="leo.20200623234055.2"><vh>control</vh></v>
+</v>
+<v t="leo.20200623235044.1"><vh>Ubuntu</vh>
+<v t="leo.20200623235044.2"><vh>Ubuntu</vh></v>
+</v>
+<v t="leo.20200623235750.1"><vh>note</vh>
+<v t="leo.20200623235750.2"><vh>note</vh></v>
+</v>
 <v t="leo.20180902120523.11"><vh>快捷鍵</vh>
 <v t="leo.20180902120523.12"><vh>投影片快捷鍵</vh></v>
 </v>
@@ -59,6 +68,8 @@
 YouTube+OBS串流直播
 
 [操作影片](https://youtu.be/KOrb2ySdu9M)
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/KOrb2ySdu9M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 
 
@@ -341,15 +352,14 @@ vertical: body pane on the botton</t>
 <t tx="leo.20200623220449.2">## 協同產品設計實習
 ## CD2020
 
-### KMOLab
-
-&lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
-&lt;/small&gt;
 
 [Repository](https://github.com/s40723145/cd2020)
  
 [Site](https://s40723145.github.io/cd2020/content/index.html)
+
+&lt;small&gt;
+Created by 40723145
+&lt;/small&gt;
 
 
 
@@ -365,9 +375,10 @@ Created by [KMOLab](http://lab.kmol.info/)
 </t>
 <t tx="leo.20200623221403.2">## Oauth2
 
-配合Google domains讓進入特定網站時檢視憑證確認是否符合資格
+配合Google Domain讓進入特定網站時檢視憑證確認是否符合資格
 
 [憑證設定影片](https://youtu.be/Rg55-qCt8dA)
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Rg55-qCt8dA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 
 
 
@@ -383,7 +394,7 @@ Created by [KMOLab](http://lab.kmol.info/)
 
 						
 </t>
-<t tx="leo.20200623222909.2">## 自走車專案
+<t tx="leo.20200623222909.2">## [自走車專案](https://s40723145.github.io/cd2020/content/w9.html)
 
 * 繪製四輪車零件
 * 零組件轉檔
@@ -391,6 +402,79 @@ Created by [KMOLab](http://lab.kmol.info/)
 * 利用Python Remote Api進行四輪車控制
 * 配合Flask、Oauth2使四輪車在網際控制
 * 利用虛擬主機配合Ubuntu20.04進行網際控制
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20200623234055.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200623234055.2">## 自走車專案
+
+利用Python remote API控制車子
+
+* [建立通訊設定](https://s40723145.github.io/cd2020/content/Remote%20API.html)
+* [建立移動程式](https://s40723145.github.io/cd2020/content/Control.html)
+
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20200623235044.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200623235044.2">## Ubuntu 20.04
+
+* [IPv6 proxy環境網路配置](https://s40723145.github.io/cd2020/content/IPv6%20%E7%92%B0%E5%A2%83%E7%B6%B2%E8%B7%AF%E8%A8%AD%E5%AE%9A.html)
+* [IPv6虛擬主機近端設定](https://s40723145.github.io/cd2020/content/IPv6.html)
+* [IPv4虛擬主機近端設定](https://s40723145.github.io/cd2020/content/IPv4.html)
+
+
+
+
+
+
+
+
+
+
+</t>
+<t tx="leo.20200623235750.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20200623235750.2">## [課程紀錄](https://s40723145.github.io/cd2020/content/course%20notes.html)
+
+紀錄每周課程內容
+
+
+
+
 
 
 
